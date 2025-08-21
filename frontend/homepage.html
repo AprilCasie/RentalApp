@@ -8,16 +8,47 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
         }
-        /*simple nav bar */
+        
+        /* Top header with search and HIREME */
+        .top-header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 40px;
+            border-bottom: 1px solid black;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Search bar - no button */
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            width: 200px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #ddd;
+        }
+        
+        /* Navigation bar */
         .navbar {
             padding: 20px;
             display: flex;
+            justify-content: space-evenly;
             align-items: center;
+            margin: 0 40px;
         }
         
         .navbar a {
             color: black;
-            margin-right: 30px;
             text-decoration: none;
             font-weight: 500;
             font-size: 16px;
@@ -27,26 +58,11 @@
             color: #3498db;
         }
         
-        /* Search bar */
-        /* .search-bar {
-            margin-left: auto;
-            margin-right: 20px;
-        } */
-        
-        .search-bar input {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 250px;
-            font-family: 'Inter', sans-serif;
-            /* border: 1px solid #ddd; */
+        /* Main content */
+        .main-content {
+            padding: 20px 40px;
         }
         
-        /* .search-bar button:hover {
-            background-color: #2980b9;
-        } */
-        
-        /* Main content */
         h1 {
             font-weight: 600;
             color: #2c3e50;
@@ -56,43 +72,53 @@
             font-weight: 500;
             color: #34495e;
         }
+        /* Full screen image container */
+        .image-container {
+            width: 100vw;
+            height: calc(50vh - 10px);
+            overflow: hidden;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+        }
+        
+        .full-image {
+            width: 100%;
+            height: 10%;
+            object-fit: cover;
+            display: block;
+        }
 
     </style>
 </head>
 <body>
-    <!-- Simple Navigation Bar -->
-    <div class="navbar">
-        <a href="homepage.html">Home</a>
-        <a href="browse.html">Browse</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        
+    <!-- Top Header with Search and Logo -->
+    <div class="top-header">
         <div class="search-bar">
             <input type="text" placeholder="Search for clothes..." id="searchInput">
         </div>
+        <div class="logo">HIREME</div>
+        <div class = "login">Log In</div>
     </div>
     
-    <h1>Clothing Rental App</h1>
-    <p>Rent designer clothes for any occasion!</p>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="events.html">Events</a>
+        <a href="gear.html">Gear</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
     
-    <h2>Browse Clothes</h2>
-    <button>Search Outfits</button>
-    
-    <h2>Categories</h2>
-    <button>Clothing</button>
-    <button>Events</button>
-    <button>Lifestyle</button>
-    <button>Gear</button>
-    
-    <h2>Get Started</h2>
-    <button>Sign Up</button>
-    <button>Log In</button>
+        
+        <!-- Full Screen Image -->
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop" alt="Fashion clothing display" class="full-image">
 
-    <script>
-        function searchClothes() {
-            const searchText = document.getElementById('searchInput').value;
-            alert("Searching for: " + searchText);
-        }
-    </script>
+        
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Rental App</h1>
+        <p>Rent for your special occasion.</p>
+
+    </div>
 </body>
 </html>
