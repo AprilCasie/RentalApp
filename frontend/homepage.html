@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rental App - Clothing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        /*simple nav bar */
+        .navbar {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar a {
+            color: black;
+            margin-right: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .navbar a:hover {
+            color: #3498db;
+        }
+        
+        /* Search bar */
+        /* .search-bar {
+            margin-left: auto;
+            margin-right: 20px;
+        } */
+        
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            font-family: 'Inter', sans-serif;
+            /* border: 1px solid #ddd; */
+        }
+        
+        /* .search-bar button:hover {
+            background-color: #2980b9;
+        } */
+        
+        /* Main content */
+        h1 {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        h2 {
+            font-weight: 500;
+            color: #34495e;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Simple Navigation Bar -->
+    <div class="navbar">
+        <a href="homepage.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search for clothes..." id="searchInput">
+        </div>
+    </div>
+    
+    <h1>Clothing Rental App</h1>
+    <p>Rent designer clothes for any occasion!</p>
+    
+    <h2>Browse Clothes</h2>
+    <button>Search Outfits</button>
+    
+    <h2>Categories</h2>
+    <button>Clothing</button>
+    <button>Events</button>
+    <button>Lifestyle</button>
+    <button>Gear</button>
+    
+    <h2>Get Started</h2>
+    <button>Sign Up</button>
+    <button>Log In</button>
+
+    <script>
+        function searchClothes() {
+            const searchText = document.getElementById('searchInput').value;
+            alert("Searching for: " + searchText);
+        }
+    </script>
+</body>
+</html>
